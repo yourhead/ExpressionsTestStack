@@ -1,0 +1,260 @@
+
+<style>
+h3,h4 {
+	margin-top:10px;
+}
+</style>
+<h3>Integer Math Expressions</h3>
+
+<h4>Addition</h4>
+Expression: <code>&#37;(2 + 4)&#37;</code> <br>
+Expected: 6 <br>
+Actual: %(2 + 4)% <br>
+Result: %[if %( %(2 + 4)% == 6)% ]% 👍 %[else]% ❌ %[endif]%
+
+<h4>Subtraction</h4>
+Expression: <code>&#37;(2 - 4)&#37;</code> <br>
+Expected: -2 <br>
+Actual: %(2 - 4)% <br>
+Result: %[if %( %(2 - 4)% == -2)% ]% 👍 %[else]% ❌ %[endif]%
+
+<h4>Multiplication</h4>
+Expression: <code>&#37;(2 * 4)&#37;</code> <br>
+Expected: 8 <br>
+Actual: %(2 * 4)% <br>
+Result: %[if %( %(2 * 4)% == 8)% ]% 👍 %[else]% ❌ %[endif]%
+
+<h4>Nested</h4>
+Expression: <code>&#37;( &#37;(2 + 4)&#37; - 5 )&#37;</code> <br>
+Expected: 1 <br>
+Actual: %( %(2 + 4)% - 5 )% <br>
+Result: %[if %( %( %(2 + 4)% - 5 )% == 1)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;( &#37;(2 + 4)&#37; * &#37;(5 - 2)&#37; )&#37;</code> <br>
+Expected: 18 <br>
+Actual: %( %(2 + 4)% * %(5 - 2)% )% <br>
+Result: %[if %( %( %(2 + 4)% * %(5 - 2)% )% == 18)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;( &#37;( &#37;(2 + 4)&#37; * &#37;(5 - 2)&#37; )&#37; - 5 )&#37;</code> <br>
+Expected: 13 <br>
+Actual: %( %( %(2 + 4)% * %(5 - 2)% )% - 5 )% <br>
+Result: %[if %( %( %( %(2 + 4)% * %(5 - 2)% )% - 5 )% == 13)% ]% 👍 %[else]% ❌ %[endif]%
+
+
+<h3>Floating Point Math Expressions</h3>
+
+<h4>Addition</h4>
+Expression: <code>&#37;(2.5 + 4)&#37;</code> <br>
+Expected: 6.5 <br>
+Actual: %(2.5 + 4)% <br>
+Result: %[if %( %(2.5 + 4)% == 6.5)% ]% 👍 %[else]% ❌ %[endif]%
+
+<h4>Subtraction</h4>
+Expression: <code>&#37;(2.5 - 4)&#37;</code> <br>
+Expected: -1.5 <br>
+Actual: %(2.5 - 4)% <br>
+Result: %[if %( %(2.5 - 4)% == -1.5)% ]% 👍 %[else]% ❌ %[endif]%
+
+<h4>Multiplication</h4>
+Expression: <code>&#37;(2.5 * 4)&#37;</code> <br>
+Expected: 10 <br>
+Actual: %(2.5 * 4)% <br>
+Result: %[if %( %(2.5 * 4)% == 10)% ]% 👍 %[else]% ❌ %[endif]%
+
+<h4>Division</h4>
+Expression: <code>&#37;(2.5 / 4)&#37;</code> <br>
+Expected: 0.625 <br>
+Actual: %(2.5 / 4)% <br>
+Result: %[if %( %(2.5 / 4)% == 0.625)% ]% 👍 %[else]% ❌ %[endif]%
+
+<h4>Nested</h4>
+Expression: <code>&#37;( &#37;(2 + 4.5)&#37; - 5.25 )&#37;</code> <br>
+Expected: 1.25 <br>
+Actual: %( %(2 + 4.5)% - 5.25 )% <br>
+Result: %[if %( %( %(2 + 4.5)% - 5.25 )% == 1.25)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;( &#37;(2 + 4.5)&#37; * &#37;(5 - 2.35)&#37; )&#37;</code> <br>
+Expected: 17.225 <br>
+Actual: %( %(2 + 4.5)% * %(5 - 2.35)% )% <br>
+Result: %[if %( %( %(2 + 4.5)% * %(5 - 2.35)% )% == 17.225)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;( &#37;( &#37;(2 + 4.5)&#37; * &#37;(5 - 2.35)&#37; )&#37; - 0.5 )&#37;</code> <br>
+Expected: 16.725 <br>
+Actual: %( %( %(2 + 4.5)% * %(5 - 2.35)% )% - 0.5 )% <br>
+Result: %[if %( %( %( %(2 + 4.5)% * %(5 - 2.35)% )% - 0.5 )% == 16.725)% ]% 👍 %[else]% ❌ %[endif]%
+
+
+
+<h3>Bitwise Expressions</h3>
+
+<h4>Shift Right</h4>
+Expression: <code>&#37;(3 << 2)&#37;</code> <br>
+Expected: 12 <br>
+Actual: %(3 << 2)% <br>
+Result: %[if %( %(3 << 2)% == 12)% ]% 👍 %[else]% ❌ %[endif]%
+
+<h4>Shift Left</h4>
+Expression: <code>&#37;(15 >> 2)&#37;</code> <br>
+Expected: 3 <br>
+Actual: %(15 >> 2)% <br>
+Result: %[if %( %(15 >> 2)% == 3)% ]% 👍 %[else]% ❌ %[endif]%
+
+
+
+<h3>Logic Expressions</h3>
+
+<h4>OR</h4>
+Expression: <code>&#37;(1 || 0)&#37;</code> <br>
+Expected: 1 <br>
+Actual: %(1 || 0)% <br>
+Result: %[if %( %(1 || 0)% == 1)% ]% 👍 %[else]% ❌ %[endif]%
+
+<h4>AND</h4>
+Expression: <code>&#37;(1 && 0)&#37;</code> <br>
+Expected: 0 <br>
+Actual: %(1 && 0)% <br>
+Result: %[if %( %(1 && 0)% == 0)% ]% 👍 %[else]% ❌ %[endif]%
+
+<h4>NOT</h4>
+Expression: <code>&#37;(! 1 && 0)&#37;</code> <br>
+Expected: 1 <br>
+Actual: %(! 1 && 0)% <br>
+Result: %[if %( %(! 1 && 0)% == 1)% ]% 👍 %[else]% ❌ %[endif]%
+
+
+
+
+
+<h3>Integer Comparisons</h3>
+
+<h4>Less-than</h4>
+Expression: <code>&#37;(20 < 100)&#37;</code> <br>
+Expected: 1 <br>
+Actual: %(20 < 100)% <br>
+Result: %[if %( %(20 < 100)% == 1)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;(100 < 100)&#37;</code> <br>
+Expected: 0 <br>
+Actual: %(100 < 100)% <br>
+Result: %[if %( %(100 < 100)% == 0)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;(100 < 20)&#37;</code> <br>
+Expected: 0 <br>
+Actual: %(100 < 20)% <br>
+Result: %[if %( %(100 < 20)% == 0)% ]% 👍 %[else]% ❌ %[endif]%
+
+<h4>Greater-than</h4>
+Expression: <code>&#37;(20 > 100)&#37;</code> <br>
+Expected: 0 <br>
+Actual: %(20 > 100)% <br>
+Result: %[if %( %(20 > 100)% == 0)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;(100 > 100)&#37;</code> <br>
+Expected: 0 <br>
+Actual: %(100 > 100)% <br>
+Result: %[if %( %(100 > 100)% == 0)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;(100 > 20)&#37;</code> <br>
+Expected: 1 <br>
+Actual: %(100 > 20)% <br>
+Result: %[if %( %(100 > 20)% == 1)% ]% 👍 %[else]% ❌ %[endif]%
+
+<h4>Less-than-or-equal</h4>
+Expression: <code>&#37;(20 <= 100)&#37;</code> <br>
+Expected: 1 <br>
+Actual: %(20 <= 100)% <br>
+Result: %[if %( %(20 <= 100)% == 1)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;(100 <= 100)&#37;</code> <br>
+Expected: 1 <br>
+Actual: %(100 <= 100)% <br>
+Result: %[if %( %(100 <= 100)% == 1)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;(100 <= 20)&#37;</code> <br>
+Expected: 0 <br>
+Actual: %(100 <= 20)% <br>
+Result: %[if %( %(100 <= 20)% == 0)% ]% 👍 %[else]% ❌ %[endif]%
+
+<h4>Greater-than-or-equal</h4>
+Expression: <code>&#37;(20 >= 100)&#37;</code> <br>
+Expected: 0 <br>
+Actual: %(20 >= 100)% <br>
+Result: %[if %( %(20 >= 100)% == 0)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;(100 >= 100)&#37;</code> <br>
+Expected: 1 <br>
+Actual: %(100 >= 100)% <br>
+Result: %[if %( %(100 >= 100)% == 1)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;(100 >= 20)&#37;</code> <br>
+Expected: 1 <br>
+Actual: %(100 >= 20)% <br>
+Result: %[if %( %(100 >= 20)% == 1)% ]% 👍 %[else]% ❌ %[endif]%
+
+
+
+<h3>Floating Point Comparisons</h3>
+
+<h4>Less-than</h4>
+Expression: <code>&#37;(20.5 < 100)&#37;</code> <br>
+Expected: 1 <br>
+Actual: %(20.5 < 100)% <br>
+Result: %[if %( %(20.5 < 100)% == 1)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;(100.0 < 100.0)&#37;</code> <br>
+Expected: 0 <br>
+Actual: %(100.0 < 100.0)% <br>
+Result: %[if %( %(100.0 < 100.0)% == 0)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;(100.5 < 20)&#37;</code> <br>
+Expected: 0 <br>
+Actual: %(100.5 < 20)% <br>
+Result: %[if %( %(100.5 < 20)% == 0)% ]% 👍 %[else]% ❌ %[endif]%
+
+<h4>Greater-than</h4>
+Expression: <code>&#37;(20.5 > 100)&#37;</code> <br>
+Expected: 0 <br>
+Actual: %(20.5 > 100)% <br>
+Result: %[if %( %(20.5 >  100)% == 0)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;(100.0 >  100.0)&#37;</code> <br>
+Expected: 0 <br>
+Actual: %(100.0 >  100.0)% <br>
+Result: %[if %( %(100.0 >  100.0)% == 0)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;(100.5 >  20)&#37;</code> <br>
+Expected: 1 <br>
+Actual: %(100.5 >  20)% <br>
+Result: %[if %( %(100.5 >  20)% == 1)% ]% 👍 %[else]% ❌ %[endif]%
+
+<h4>Less-than-or-equal</h4>
+Expression: <code>&#37;(20.5 <= 100)&#37;</code> <br>
+Expected: 1 <br>
+Actual: %(20.5 <= 100)% <br>
+Result: %[if %( %(20.5 <= 100)% == 1)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;(100.0 <= 100.0)&#37;</code> <br>
+Expected: 1 <br>
+Actual: %(100.0 <= 100.0)% <br>
+Result: %[if %( %(100.0 <= 100.0)% == 1)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;(100.5 <= 20)&#37;</code> <br>
+Expected: 0 <br>
+Actual: %(100.5 <= 20)% <br>
+Result: %[if %( %(100.5 <= 20)% == 0)% ]% 👍 %[else]% ❌ %[endif]%
+
+<h4>Greater-than-or-equal</h4>
+Expression: <code>&#37;(20.5 >= 100)&#37;</code> <br>
+Expected: 0 <br>
+Actual: %(20.5 >= 100)% <br>
+Result: %[if %( %(20.5 >= 100)% == 0)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;(100.0 >= 100.0)&#37;</code> <br>
+Expected: 1 <br>
+Actual: %(100.0 >= 100.0)% <br>
+Result: %[if %( %(100.0 >= 100.0)% == 1)% ]% 👍 %[else]% ❌ %[endif]%
+<br><br>
+Expression: <code>&#37;(100.5 >= 20)&#37;</code> <br>
+Expected: 1 <br>
+Actual: %(100.5 >= 20)% <br>
+Result: %[if %( %(100.5 >= 20)% == 1)% ]% 👍 %[else]% ❌ %[endif]%
